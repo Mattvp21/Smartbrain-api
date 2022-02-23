@@ -19,18 +19,11 @@ const db = knex({
       user : 'mvp',
       password : '',
       database : 'smart-brain'
-    }
+    },
+    ssl: {
+        rejectUnauthorized: false
+      }
   });
-
-db.select('*').from('users').then(data => {
-   
-})
-
-
-
-
-
-
 
 app.get('/', (req, res) => {
     res.send('Success')
@@ -57,7 +50,7 @@ app.post('/imageurl', (req, res) => {
 
 
 
-//Just fixed
+
 app.listen(process.env.PORT || 8000, () => {
     console.log(`App is running on ${process.env.PORT}`)
 })
