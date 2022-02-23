@@ -57,8 +57,8 @@ app.post('/imageurl', (req, res) => {
 
 
 
-const PORT = process.env.PORT
-app.listen(PORT, () => {
+
+app.listen(8000, () => {
     console.log(`App is running on ${PORT}`)
 })
 
